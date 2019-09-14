@@ -2,7 +2,7 @@
   "version": 1,
   "projects": {
     "app": {
-      "projectType": "apps/application",
+      "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
