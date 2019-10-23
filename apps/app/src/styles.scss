@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import '~bpmn-js/dist/assets/diagram-js';
+@import '~bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
+@import '~bpmn-js-properties-panel/dist/assets/bpmn-js-properties-panel.css';
+@import '~diagram-js-minimap/assets/diagram-js-minimap';
+
+.bjs-powered-by {
+  display: none !important;
+}

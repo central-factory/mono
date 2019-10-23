@@ -19,6 +19,9 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "bpmn-modeler": {
+      "tags": []
     }
   }
 }

@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@public/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@public/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@public/bpmn-modeler": ["libs/bpmn-modeler/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
