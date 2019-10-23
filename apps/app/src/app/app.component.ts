@@ -14,12 +14,12 @@ import customPropertiesDescriptor from './pfs/properties-panel/descriptor';
       <img width="450" src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"/>
     </div -->
     <div>Message: {{ hello$ | async | json }}</div>
-    <bpmn-modeler
+    <ngx-bpmn-modeler
       [propertiesProvider]="propertiesProvider"
       [propertiesDescriptor]="propertiesDescriptor"
       [ngModel]="bpmn"
       (ngModelChange)="log('value changes', $event)">
-    </bpmn-modeler>
+    </ngx-bpmn-modeler>
   `,
   styleUrls: ['./app.component.scss']
 })

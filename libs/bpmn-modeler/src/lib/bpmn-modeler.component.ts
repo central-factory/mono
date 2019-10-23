@@ -7,7 +7,7 @@ import minimapModule from 'diagram-js-minimap';
 
 @Component({
   // tslint:disable-next-line: component-selector
-  selector: 'bpmn-modeler',
+  selector: 'ngx-bpmn-modeler',
   template: `
     <div [ngClass]="wrapperClass">
       <div [ngClass]="containerClass" #containerRef></div>

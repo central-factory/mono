@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BpmnModelerModule } from '@public/bpmn-modeler';
+import { BpmnModelerModule } from '@central-factory/ngx-bpmn-modeler';
 
 @NgModule({
   declarations: [AppComponent],
