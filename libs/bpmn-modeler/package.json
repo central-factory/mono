@@ -1,6 +1,7 @@
 {
-  "name": "@central-factory/bpmn-modeler",
-  "version": "0.0.1",
+  "name": "@central-factory/ngx-bpmn-modeler",
+  "version": "0.0.2",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^8.2.4",
     "@angular/core": "^8.2.4",
