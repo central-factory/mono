@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Message } from '@public/api-interfaces';
 
 import bpmn from './pfs/bpmn';
-import CustomPropertiesProvider from './pfs/properties-panel/provider';
-import customPropertiesDescriptor from './pfs/properties-panel/descriptor';
+import customPropertiesDescriptor from './pfs/properties-descriptor';
 
 @Component({
   selector: 'public-root',
@@ -15,7 +14,6 @@ import customPropertiesDescriptor from './pfs/properties-panel/descriptor';
     </div -->
     <div>Message: {{ hello$ | async | json }}</div>
     <ngx-bpmn-modeler
-      [propertiesProvider]="propertiesProvider"
       [propertiesDescriptor]="propertiesDescriptor"
       [ngModel]="bpmn"
       (ngModelChange)="log('value changes', $event)">
@@ -26,7 +24,6 @@ import customPropertiesDescriptor from './pfs/properties-panel/descriptor';
 export class AppComponent {
 
   bpmn = bpmn;
-  propertiesProvider = CustomPropertiesProvider;
   propertiesDescriptor = customPropertiesDescriptor;
 
   hello$ = this.http.get<Message>('/api/hello');

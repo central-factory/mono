@@ -30,6 +30,7 @@ import { BpmnModelerModule } from '@central-factory/ngx-bpmn-modeler';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    FormsModule,
     BpmnModelerModule
   ],
   providers: [],
@@ -38,19 +39,58 @@ import { BpmnModelerModule } from '@central-factory/ngx-bpmn-modeler';
 export class AppModule {}
 ```
 
-### 4. Define your CustomPropertiesProvider and customPropertiesDescriptor 
+### 4. Include the component
 
-You can see how at [bpmn-js examples](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
-
-### 5. Use the component
 ```html
-<ngx-bpmn-modeler
-  [propertiesProvider]="MyPropertiesProvider"
-  [propertiesDescriptor]="myPropertiesDescriptor"
-  [wrapperClass]="myWrapperCSSClass"
-  [containerClass]="myContainerCSSClass"
-  [propertiesClass]="myPropertiesPanelCSSClass"
-  [ngModel]="modelerXMLValue">
+<ngx-bpmn-modeler [(ngModel)]="xmlModel">
 </ngx-bpmn-modeler>
 ```
 
+## Inputs
+
+| name | description |
+| ---- | ----------- |
+| wrapperClass | Wrapper element custom CSS Class
+| containerClass | Container element custom CSS Class
+| propertiesClass | Properties Panel element custom CSS Class
+| propertiesProvider | Your custom Properties Provider. [See bpmn-js properties panel extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
+| propertiesDescriptor | Your custom Properties Descriptor. [See bpmn-js properties panel extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
+
+## Tips
+
+### Adding Custom Properties
+
+You can see how at [bpmn-js examples](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
+
+If your customizations are simple, you can omit `PropertiesProvider` by adding some extra fields to your `PropertiesDescriptor`.
+
+```typescript
+const myCustomPropertiesDescriptor = {
+  id: 'world',
+  name: 'World',
+  label: 'World Properties',
+  prefix: 'world',
+  uri: 'http://world',
+  xml: {
+    tagAlias: 'lowerCase'
+  },
+  associations: [],
+  types: [
+    {
+      name: 'CustomizedSequenceFlow',
+      extends: [
+        'bpmn:SequenceFlow'
+      ],
+      properties: [
+        {
+          name: 'description',
+          description: 'Description of the sequence',
+          label : 'Description',
+          isAttr: true,
+          type: 'String'
+        }
+      ]
+    },
+  ]
+}
+```

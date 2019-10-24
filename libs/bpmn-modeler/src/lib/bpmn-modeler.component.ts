@@ -5,6 +5,8 @@ import BpmnModeler from 'bpmn-js/lib/Modeler';
 import propertiesPanelModule from 'bpmn-js-properties-panel';
 import minimapModule from 'diagram-js-minimap';
 
+import { createPropertiesProviderFromDescriptor } from './properties-panel';
+
 @Component({
   // tslint:disable-next-line: component-selector
   selector: 'ngx-bpmn-modeler',
@@ -49,6 +51,25 @@ export class BPMNModelerComponent implements ControlValueAccessor, OnInit, After
       propertiesPanelModule,
       minimapModule,
     ];
+
+    if (!this.propertiesDescriptor) {
+      this.propertiesDescriptor = {
+        id: 'app',
+        name: 'App',
+        label: 'App Properties',
+        prefix: 'app',
+        uri: 'http://localhost:4200',
+        xml: {
+          tagAlias: 'lowerCase'
+        },
+        associations: [],
+        types: []
+      };
+    }
+
+    if (!this.propertiesProvider && this.propertiesDescriptor) {
+      this.propertiesProvider = createPropertiesProviderFromDescriptor(this.propertiesDescriptor);
+    }
 
     if (this.propertiesProvider) {
       modules.push({
