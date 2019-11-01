@@ -1,7 +1,11 @@
 {
   "name": "@central-factory/ngx-codex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/central-factory/mono/tree/master/libs/ngx-codex"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.4",
     "@angular/core": "^8.2.4",
