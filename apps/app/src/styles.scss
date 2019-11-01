@@ -9,3 +9,24 @@
 .bjs-powered-by {
   display: none !important;
 }
+
+body {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/papyrus-dark.png");
+}
+
+.bpmn-wrapper {
+  width: 100%;
+}
+
+.bpmn-container {
+  width: 70%;
+  height: 400px;
+  display: inline-block;
+}
+
+.bpmn-properties {
+  width: 30%;
+  max-height: 400px;
+  overflow: auto;
+  display: inline-block;
+}

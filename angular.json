@@ -234,6 +234,78 @@
         }
       },
       "schematics": {}
+    },
+    "nest-auth": {
+      "projectType": "library",
+      "root": "libs/nest-auth",
+      "sourceRoot": "libs/nest-auth/src",
+      "prefix": "central-factory",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/nest-auth/tsconfig.lib.json",
+            "project": "libs/nest-auth/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/nest-auth/tsconfig.lib.json",
+              "libs/nest-auth/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/nest-auth/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nest-auth/jest.config.js",
+            "tsConfig": "libs/nest-auth/tsconfig.spec.json",
+            "setupFile": "libs/nest-auth/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "ngx-codex": {
+      "projectType": "library",
+      "root": "libs/ngx-codex",
+      "sourceRoot": "libs/ngx-codex/src",
+      "prefix": "central-factory",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ngx-codex/tsconfig.lib.json",
+            "project": "libs/ngx-codex/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-codex/tsconfig.lib.json",
+              "libs/ngx-codex/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngx-codex/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngx-codex/jest.config.js",
+            "tsConfig": "libs/ngx-codex/tsconfig.spec.json",
+            "setupFile": "libs/ngx-codex/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -1,0 +1,19 @@
+{
+  "name": "@central-factory/nest-auth",
+  "version": "0.0.1",
+  "license": "MIT",
+  "peerDependencies": {
+    "@nestjs/common": "^6.8.4",
+    "@nestjs/core": "^6.8.4",
+    "@nestjs/jwt": "^6.1.1",
+    "@nestjs/passport": "^6.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "googleapis": "^44.0.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-microsoft": "0.0.5",
+    "passport-spotify": "^1.1.0"
+  }
+}

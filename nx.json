@@ -1,5 +1,5 @@
 {
-  "npmScope": "public",
+  "npmScope": "central-factory",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -21,6 +21,12 @@
       "tags": []
     },
     "bpmn-modeler": {
+      "tags": []
+    },
+    "nest-auth": {
+      "tags": []
+    },
+    "ngx-codex": {
       "tags": []
     }
   }

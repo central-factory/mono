@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BpmnModelerModule } from '@central-factory/ngx-bpmn-modeler';
+import { BpmnModelerModule, BPMNModelerComponent } from '@central-factory/ngx-bpmn-modeler';
+import { CodexModule } from '@central-factory/ngx-codex';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,9 +14,11 @@ import { BpmnModelerModule } from '@central-factory/ngx-bpmn-modeler';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    BpmnModelerModule
+    BpmnModelerModule,
+    CodexModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [BPMNModelerComponent]
 })
 export class AppModule {}
