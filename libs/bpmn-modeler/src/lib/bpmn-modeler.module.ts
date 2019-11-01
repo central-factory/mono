@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { BPMNModelerComponent } from './bpmn-modeler.component';
 
+export { BPMNModelerComponent } from './bpmn-modeler.component';
+
 export * from './properties-panel';
 
 @NgModule({

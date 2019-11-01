@@ -38,7 +38,7 @@ export class BPMNModelerComponent implements ControlValueAccessor, OnInit, After
   @ViewChild('containerRef', { static: true }) containerRef: ElementRef;
   @ViewChild('propertiesRef', { static: true }) propertiesRef: ElementRef;
 
-  private modeler: any;
+  private modeler: BpmnModeler;
 
   private _value = '';
 
