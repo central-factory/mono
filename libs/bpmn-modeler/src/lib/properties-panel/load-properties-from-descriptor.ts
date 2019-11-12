@@ -14,7 +14,9 @@ export function loadPropertiesFromDescriptor(group, element, descriptor) {
           id: prop.name,
           description: prop.description,
           label: prop.label,
-          modelProperty: prop.name
+          modelProperty: prop.name,
+          type: prop.type,
+          selectOptions: prop.selectOptions,
         })
       );
 
@@ -25,7 +27,19 @@ export function loadPropertiesFromDescriptor(group, element, descriptor) {
       }
 
       options.forEach(
-        option => group.entries.push(entryFactory.textField(option))
+        option => {
+          console.log(option);
+          switch (option.type) {
+            case 'Boolean':
+              return group.entries.push(entryFactory.checkbox(option));
+            case 'String':
+            default:
+              if (option.selectOptions) {
+                return group.entries.push(entryFactory.selectBox(option));
+              }
+              return group.entries.push(entryFactory.textField(option));
+          }
+        }
       );
     }
   );

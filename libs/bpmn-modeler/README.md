@@ -50,11 +50,12 @@ export class AppModule {}
 
 | name | description |
 | ---- | ----------- |
-| wrapperClass | Wrapper element custom CSS Class
-| containerClass | Container element custom CSS Class
-| propertiesClass | Properties Panel element custom CSS Class
-| propertiesProvider | Your custom Properties Provider. [See bpmn-js properties panel extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
-| propertiesDescriptor | Your custom Properties Descriptor. [See bpmn-js properties panel extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
+| wrapperClass | Wrapper element custom CSS Class |
+| containerClass | Container element custom CSS Class |
+| propertiesClass | Properties Panel element custom CSS Class |
+| propertiesProvider | Your custom Properties Provider. [See bpmn-js properties panel extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension) |
+| propertiesDescriptor | Your custom Properties Descriptor. [See bpmn-js properties panel extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension) |
+| additionalModules | Additional BPMN-js modules. |
 
 ## Tips
 

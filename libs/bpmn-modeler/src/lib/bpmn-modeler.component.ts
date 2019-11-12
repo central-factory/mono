@@ -28,6 +28,7 @@ export class BPMNModelerComponent implements ControlValueAccessor, OnInit, After
 
   @Input() propertiesProvider;
   @Input() propertiesDescriptor;
+  @Input() additionalModules = [];
 
   @Input() wrapperClass = '';
   @Input() containerClass = '';
@@ -50,7 +51,7 @@ export class BPMNModelerComponent implements ControlValueAccessor, OnInit, After
     const modules = [
       propertiesPanelModule,
       minimapModule,
-    ];
+    ].concat(this.additionalModules);
 
     if (!this.propertiesDescriptor) {
       this.propertiesDescriptor = {
