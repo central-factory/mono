@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/papyrus-dark.png");
+  // background: url("https://www.toptal.com/designers/subtlepatterns/patterns/papyrus-dark.png");
 }
 
 .bpmn-wrapper {
@@ -19,13 +19,13 @@ body {
 }
 
 .bpmn-container {
-  width: 70%;
+  width: 50%;
   height: 400px;
   display: inline-block;
 }
 
 .bpmn-properties {
-  width: 30%;
+  width: 50%;
   max-height: 400px;
   overflow: auto;
   display: inline-block;

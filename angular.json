@@ -306,6 +306,44 @@
           "styleext": "scss"
         }
       }
+    },
+    "bpmn2xstate": {
+      "projectType": "library",
+      "root": "libs/bpmn2xstate",
+      "sourceRoot": "libs/bpmn2xstate/src",
+      "prefix": "central-factory",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/bpmn2xstate/tsconfig.lib.json",
+            "project": "libs/bpmn2xstate/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/bpmn2xstate/tsconfig.lib.json",
+              "libs/bpmn2xstate/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/bpmn2xstate/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/bpmn2xstate/jest.config.js",
+            "tsConfig": "libs/bpmn2xstate/tsconfig.spec.json",
+            "setupFile": "libs/bpmn2xstate/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -28,7 +28,6 @@ export function loadPropertiesFromDescriptor(group, element, descriptor) {
 
       options.forEach(
         option => {
-          console.log(option);
           switch (option.type) {
             case 'Boolean':
               return group.entries.push(entryFactory.checkbox(option));

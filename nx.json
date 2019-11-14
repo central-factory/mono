@@ -28,6 +28,9 @@
     },
     "ngx-codex": {
       "tags": []
+    },
+    "bpmn2xstate": {
+      "tags": []
     }
   }
 }

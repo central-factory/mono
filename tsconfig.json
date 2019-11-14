@@ -19,7 +19,8 @@
       "@public/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@central-factory/ngx-bpmn-modeler": ["libs/bpmn-modeler/src/index.ts"],
       "@central-factory/nest-auth": ["libs/nest-auth/src/index.ts"],
-      "@central-factory/ngx-codex": ["libs/ngx-codex/src/index.ts"]
+      "@central-factory/ngx-codex": ["libs/ngx-codex/src/index.ts"],
+      "@central-factory/bpmn2xstate": ["libs/bpmn2xstate/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
