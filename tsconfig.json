@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@public/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@central-factory/blueprints": ["libs/blueprints/src/index.ts"],
       "@central-factory/ngx-bpmn-modeler": ["libs/bpmn-modeler/src/index.ts"],
       "@central-factory/nest-auth": ["libs/nest-auth/src/index.ts"],
       "@central-factory/ngx-codex": ["libs/ngx-codex/src/index.ts"],

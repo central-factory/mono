@@ -176,9 +176,9 @@
         }
       }
     },
-    "api-interfaces": {
-      "root": "libs/api-interfaces",
-      "sourceRoot": "libs/api-interfaces/src",
+    "blueprints": {
+      "root": "libs/blueprints",
+      "sourceRoot": "libs/blueprints/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -186,17 +186,17 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/api-interfaces/tsconfig.lib.json",
-              "libs/api-interfaces/tsconfig.spec.json"
+              "libs/blueprints/tsconfig.lib.json",
+              "libs/blueprints/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": ["**/node_modules/**", "!libs/blueprints/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/api-interfaces/jest.config.js",
-            "tsConfig": "libs/api-interfaces/tsconfig.spec.json"
+            "jestConfig": "libs/blueprints/jest.config.js",
+            "tsConfig": "libs/blueprints/tsconfig.spec.json"
           }
         }
       }
