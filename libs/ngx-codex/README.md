@@ -50,7 +50,7 @@ const myEditorTools = [
 ```html
 <ngx-codex [(ngModel)]="myEditorValueModel"
   [tools]="myEditorTools">
-</ngx-bpmn-modeler>
+</ngx-codex>
 ```
 
 ## Inputs

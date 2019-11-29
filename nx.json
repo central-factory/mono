@@ -20,7 +20,7 @@
     "blueprints": {
       "tags": []
     },
-    "bpmn-modeler": {
+    "ngx-bpmn-modeler": {
       "tags": []
     },
     "nest-auth": {

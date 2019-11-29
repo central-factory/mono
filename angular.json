@@ -201,35 +201,35 @@
         }
       }
     },
-    "bpmn-modeler": {
+    "ngx-bpmn-modeler": {
       "projectType": "library",
-      "root": "libs/bpmn-modeler",
-      "sourceRoot": "libs/bpmn-modeler/src",
+      "root": "libs/ngx-bpmn-modeler",
+      "sourceRoot": "libs/ngx-bpmn-modeler/src",
       "prefix": "public",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/bpmn-modeler/tsconfig.lib.json",
-            "project": "libs/bpmn-modeler/ng-package.json"
+            "tsConfig": "libs/ngx-bpmn-modeler/tsconfig.lib.json",
+            "project": "libs/ngx-bpmn-modeler/ng-package.json"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/bpmn-modeler/tsconfig.lib.json",
-              "libs/bpmn-modeler/tsconfig.spec.json"
+              "libs/ngx-bpmn-modeler/tsconfig.lib.json",
+              "libs/ngx-bpmn-modeler/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/bpmn-modeler/**"]
+            "exclude": ["**/node_modules/**", "!libs/ngx-bpmn-modeler/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/bpmn-modeler/jest.config.js",
-            "tsConfig": "libs/bpmn-modeler/tsconfig.spec.json",
-            "setupFile": "libs/bpmn-modeler/src/test-setup.ts"
+            "jestConfig": "libs/ngx-bpmn-modeler/jest.config.js",
+            "tsConfig": "libs/ngx-bpmn-modeler/tsconfig.spec.json",
+            "setupFile": "libs/ngx-bpmn-modeler/src/test-setup.ts"
           }
         }
       },

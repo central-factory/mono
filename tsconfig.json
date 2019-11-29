@@ -17,7 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@central-factory/blueprints": ["libs/blueprints/src/index.ts"],
-      "@central-factory/ngx-bpmn-modeler": ["libs/bpmn-modeler/src/index.ts"],
+      "@central-factory/ngx-bpmn-modeler": ["libs/ngx-bpmn-modeler/src/index.ts"],
       "@central-factory/nest-auth": ["libs/nest-auth/src/index.ts"],
       "@central-factory/ngx-codex": ["libs/ngx-codex/src/index.ts"],
       "@central-factory/bpmn2xstate": ["libs/bpmn2xstate/src/index.ts"]
